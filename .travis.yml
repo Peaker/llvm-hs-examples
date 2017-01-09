@@ -44,7 +44,7 @@ install:
   - ln -s $HOME/llvm-build/bin/llvm-config $HOME/bin/llvm-config
   - llvm-config --version
   - stack setup
-  - stack build
+  - stack build --ghc-options --extra-lib-dirs=$HOME/llvm-build
 
 script:
   - git --version
